@@ -1,0 +1,1248 @@
+body,html{
+     margin: 0;
+  padding: 0;
+
+
+overflow-x: hidden;
+  background: rgb(0, 0, 0);
+  }
+  html {
+  scroll-behavior: smooth;
+}
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden !important;
+}
+
+
+  body{
+    position: relative;
+  }
+
+  #logocentratmob{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+  }
+  #logomob{
+    position: absolute;
+    max-height: 20vh;
+    
+  }
+  #totsvg2{
+    width: 100vw;
+    height: 100dvh;
+    background-color: white;
+
+   
+
+  }
+.totsvg2.dispare{
+  opacity: 0;
+}
+
+/* === LINIA CENTRATĂ === */
+.line-orizontala {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(50%) rotate(270deg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+#backmaintlf {
+  transition: background-color 1s ease;
+}
+
+.animated-line2 {
+  height: 100%;
+  width: 2px;
+}
+
+.animated-line2 path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 1s ease-out forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.half-screen-tlf {
+ position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 0; /* pornesc de la 0 */
+  background-color: black;
+  z-index: 1;
+}
+
+.left-half-tlf {
+  top: 50vh; /* pornește de la mijlocul ecranului */
+  animation: expandUP 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.1s forwards;
+}
+
+.right-half-tlf {
+  top: 50vh; /* la fel, pornește de la mijloc */
+  animation: expandDown 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.1s forwards;
+}
+
+@keyframes expandUP {
+  to {
+    height: 50vh;      /* se extinde în sus cu 50% din ecran */
+    top: 0;            /* ajunge în partea de sus */
+  }
+}
+
+@keyframes expandDown {
+  to {
+    height: 50vh;      /* se extinde în jos cu 50% din ecran */
+    top: 50vh;         /* rămâne jos */
+  }
+}
+
+.fullscreen-tlf{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.fullscreen-tlf{
+  opacity: 0;
+  transform: scale(0.95);
+  filter: blur(10px);
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease,
+    filter 1.5s ease;
+}
+
+.fullscreen-tlf.apare {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+
+}
+#backmaintlf {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+#backmaintlf.apare {
+  opacity: 1;
+}
+#backmaintlf{
+z-index: 10000;
+  position: absolute;
+}
+#lichiddesus{
+
+  position: relative;
+  z-index: 1000;
+ 
+}
+#partea2tlf{
+  width: 100vw;
+  height: auto;
+  padding-bottom: 10vw;
+  position: relative;
+
+
+}
+.headertlf{
+  
+
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;  /* OBLIGATORIU! */
+z-index: 10000;
+}
+#logo_headertlf{
+  max-width: 50dvw;
+
+}
+#logo_headertlf a{
+    text-decoration: none;
+  color: inherit; /* păstrează culoarea textului */
+}
+#meniutlf{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+position: absolute;
+right: 0;
+margin-right: 5vw;
+}
+#meniutlf2{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+position: absolute;
+right: 0;
+margin-right: 5vw;
+}
+
+#galhead2,#servhead2{
+  z-index: 1000001;
+  font-size: 1.2vw;
+  letter-spacing: 0.2vw;
+        font-family: "General Sans", sans-serif;
+  font-weight: 100;
+   opacity: 1;
+}
+#cerculetheadtlf{
+   z-index: 1000001;
+    width:5vw;            /* sau 4vw, dar trebuie să fie egal cu height */
+  height: 5vw;           /* sau 4vw */
+ border: 3px solid black;
+ border-radius: 50%;
+ opacity: 1;
+}
+
+#cerculetheadtlf2{
+   z-index: 1000001;
+    width:5vw;            /* sau 4vw, dar trebuie să fie egal cu height */
+  height: 5vw;           /* sau 4vw */
+ border: 3px solid rgb(255, 255, 255);
+ border-radius: 50%;
+ opacity: 1;
+
+}
+#scris_sub_header_tlf{
+
+  width: 100dvw;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+
+
+}
+
+#sh1_tlf{
+  margin: 0;
+  color: #000;
+font-family: 'General Sans', sans-serif;
+font-size: 13vw;
+font-style: normal;
+font-weight: 400;
+  line-height: 1%; /* 110.4px */
+  opacity: 1;
+ margin-left: 2vw;
+}
+#sh2_tlf{
+margin: 0;
+  color: #000;
+    font-family: 'abr', serif;
+font-size: 13vw;
+font-style: normal;
+font-weight: 100;
+text-align: right;         /* ← aliniază textul în dreapta */
+  align-self: flex-end;      /* ← pentru flexbox dacă este în coloană */
+  margin-right: 3vw;
+    line-height:20vh;
+    opacity: 1;
+ 
+}
+
+#overlaymenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: black;
+  z-index: 999999;
+  display: flex;
+ flex-direction: column;
+
+align-items: center;
+  padding: 2vh;
+}
+
+#closebtn {
+
+  color: white;
+  font-size: 4vh;
+position: absolute;
+  transform: translateX(37vw);
+
+  cursor: pointer;
+}
+#closebtn-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#logo_meniul {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+#menulist h1 {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+#menulist {
+
+  margin-top: 10dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+gap: 3vh;
+}
+#menulist h1{
+  text-align: center;
+    opacity: 0;
+}
+#m1 {
+  color: white;
+  font-size: 15vw;
+margin: 0;
+ font-family: "Poppins", sans-serif;
+       font-weight: 100;
+  cursor: pointer;
+}
+#m2{
+  margin: 0;
+   color: white;
+  font-size: 14vw;
+      font-family: "ClashDisplay-Regular", sans-serif;
+       font-weight: 300;
+  cursor: pointer;
+}
+#logo_meniul{
+  max-width: 30dvh;
+}
+#partea3tlf{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+ 
+
+}
+#pf1tlf{
+  max-width: 80vh;
+}
+#detaliitlf{
+
+   width: 100vw;
+ height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  justify-content: center;
+}
+#detaliu1tlf{
+  overflow: show;
+  height: 45%;
+   color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#detaliu1tlf, #detaliu2tlf {
+  box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+  transform: scale(1);
+  transition: box-shadow 0.8s ease, transform 0.8s ease;
+}
+
+
+#det1tlf{
+   font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 2.5rem;
+  text-align: center;
+ text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.37);
+  border-radius: 20px;
+
+}
+#sp1tlf,#sp2tlf{
+
+  font-weight: 350;
+}
+#detaliu2tlf{
+   height: 45%;
+ 
+
+
+  text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.37);
+}
+
+#paralaxefectpoza1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 70vw;
+  overflow: hidden;
+
+}
+#mentiune2{
+    margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+#partea4{
+  padding-top: 10vh;
+  display: flex;
+background-image: url(poze/backp4.png);
+background-position: center;
+
+background-repeat: no-repeat;
+
+flex-direction: column;
+  width: 100vw;
+  height:auto;
+padding-bottom: 20vh;
+
+}
+#imaginile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+gap: 5vh;
+  text-align: center;
+}
+.container{
+  width: 100vw;
+  height: 40vh;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.499);
+}
+.container img{
+height: 50vh;
+width: 100vw;
+  object-fit: cover;
+}
+#at{
+  font-weight:200;
+  font-size: 2rem;
+   font-family: "ClashDisplay-Light", sans-serif;
+   text-shadow: -2px 3px 5px rgba(0,0,0,0.6);
+}
+
+#lf{
+ font-weight:200;
+  font-size: 2rem;
+   font-family: "ClashDisplay-Light", sans-serif;
+   text-shadow: -2px 3px 5px rgba(0,0,0,0.6);
+}
+
+#dt{
+  font-weight:200;
+  font-size: 2rem;
+   font-family: "ClashDisplay-Light", sans-serif;
+   text-shadow: -2px 3px 5px rgba(0,0,0,0.6);
+}
+
+
+
+#lookuri{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    background-image: url(poze/backlockuri.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 10vh;
+}
+#textLook{
+      font-family: "ClashDisplay-Regular", sans-serif;
+       font-weight: 300;
+       font-size: 2.5rem;
+       text-align: center;
+       padding-bottom: 10dvh;
+       text-shadow: -2px 3px 5px rgba(0,0,0,0.6);
+}
+#Denumire{
+  font-family: "ClashDisplay-Regular", sans-serif;
+       font-weight: 300;
+       font-size: 2rem;
+
+}
+.banner{
+
+  z-index: 100000;
+    width: 100%;
+    height: 120dvh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 20%;
+  
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    z-index: 2;
+      margin-bottom: 20vh;
+}
+.banner .slider {
+
+  transform: 
+    perspective(1000px)
+    rotateY(calc( (1 - var(--current)) * (360 / var(--quantity)) * 1deg));
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(400px);
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+    border: 1px solid rgba(0, 0, 0, 0.399);
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.slider .item {
+  will-change: filter;
+}
+#programare2 {
+
+  border: none;
+  width: 15em;
+  height: 5em;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFE6EC; /* roz foarte deschis */
+  cursor: pointer;
+  transition: all 0.5 cubic-bezier(.4,0,.2,1);
+  box-shadow:
+    0 0 0px 0px rgba(255, 255, 255, 0.2),
+    0 0 24px 0px #E8B4B4,
+    0 4px 40px 0px #B2526A88; /* proiecție roz-închis */
+  position: relative;
+  gap: 12px; /* poți elimina dacă nu ai icon/text */
+  font-size: 1.2rem;
+   font-family: 'Poppins', sans-serif;
+   color: black;
+}
+
+#programare2:hover {
+  background: linear-gradient(0deg, #FAD1DF 0%, #E8B4B4 100%);
+  box-shadow:
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.35),
+    inset 0px -4px 0px 0px rgba(160, 68, 100, 0.20),
+    0px 0px 0px 4px rgba(232, 180, 180, 0.25),
+    0px 0px 120px 0px #B2526A;
+  transform: translateY(-2px) scale(1.04);
+   color: black;
+}
+#partea5intermediara{
+
+  position: relative;
+  overflow: hidden;  /* sau hidden, dacă vrei să nu se vadă nimic în afara lui */
+  
+}
+
+#partea6{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+#headertlfmicro{
+opacity: 0;
+  width: 100vw;
+  z-index: 10000;
+  height: 20vh;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30vw;
+  position: relative;  /* OBLIGATORIU! */
+}
+#logo_header2tlf{
+   max-width: 50dvw;
+   
+}
+#scris_micropigmentaretlf{
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+
+  
+}
+#mic1tlf{
+  margin: 0;
+  color: #ffffff;
+font-family: 'General Sans', sans-serif;
+font-size: 13vw;
+font-style: normal;
+font-weight: 400;
+  line-height: 1%; /* 110.4px */
+  opacity: 1;
+ margin-left: 2vw;
+}
+#mic2tlf{
+margin: 0;
+  color: #ffffff;
+    font-family: 'abr', serif;
+font-size: 13vw;
+font-style: normal;
+font-weight: 100;
+text-align: right;         /* ← aliniază textul în dreapta */
+  align-self: flex-end;      /* ← pentru flexbox dacă este în coloană */
+  margin-right: 3vw;
+    line-height:20vh;
+    opacity: 1;
+ 
+}
+#micropigmentare{
+  background-image: url(poze/backmicrotlf.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+margin-bottom: 20vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+
+}
+#Union{
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000000;
+  position: absolute;
+  top: 0;
+
+ transform: rotate(10deg);
+}
+
+#lumina{
+
+  position: absolute;
+   transform: translateY(-25vh) translateX(25vw);
+
+}
+#pozafata{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pozamicro1{
+  border-radius: 3%;
+  max-width: 35vh;
+}
+#textz{
+  width: 90vw;
+  height: auto;
+  text-align: center;
+  color: black;
+  font-family: "ClashDisplay-Elight";
+  font-weight: 100;
+  border-radius: 30px;
+  font-size: 0.9rem;
+background: linear-gradient(46deg, #AE8625 0.89%, #F7EF8A 50.36%, #D2AC47 87.47%, #EDC967 99.84%);
+}
+#textdifmicropig{
+font-family: 'Canela Text Trial', sans-serif;
+font-size: 1.1 rem;
+}
+
+
+
+#partea7{
+
+overflow: hidden;
+}
+#partea8micropig{
+  margin-top: 20vh;
+  padding-top: 10vh;
+  width: 100vw;
+  height: auto;
+ background: radial-gradient(65.65% 48.53% at 50% 51.54%, #574313 0%, #000000 100%);
+ background-position: center;
+ margin-bottom: 25vh;
+}
+#pozelecercnegru{
+  display: flex;
+  width: 100vw;
+  height: auto;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap:5vh
+}
+#pozelecercnegru img{
+ max-width: 80vw;
+ box-shadow: -1px 3px 16px 0px rgba(255,255,255,0.75);
+-webkit-box-shadow: -1px 3px 16px 0px rgba(255,255,255,0.75);
+-moz-box-shadow: -1px 3px 16px 0px rgba(255,255,255,0.75);
+ border-radius: 5%;
+}
+#detaliilefacdif{
+    font-family: "ClashDisplay-Elight";
+  font-weight: 100;
+  text-align: center;
+  line-height: 10vh;
+font-size: 3rem;
+text-shadow: -3px 2px 2px rgba(0,0,0,1);
+}
+
+
+#serviciimicro{
+  width: 100vw;
+  height: auto;
+  background-image: url("poze/microserviciiback.webp");
+background-position: top center;
+background-size: cover;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+padding-bottom: 10vh;
+  
+}
+#stcilaservicii{
+  width: 90vw;
+  height: auto;
+ /* From https://css.glass */
+background: rgba(19, 19, 19, 0.245);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.7px);
+-webkit-backdrop-filter: blur(5.7px);
+border: 1px solid rgba(255,255,255,0.22);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding-bottom: 5vh;
+}
+#servbuze{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+#servsprancene{
+   width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#servlistabuze{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+#servbuze, #servsprancene {
+  opacity: 1;
+  transition: opacity 0.4s, transform 0.4s;
+  will-change: opacity, transform;
+  position: absolute;
+  left: 0; top: 0; width: 100%;  /* ca să se suprapună natural, poți adapta după layout */
+  pointer-events: none;
+}
+#servbuze.active, #servsprancene.active {
+  pointer-events: auto;
+  position: static;
+}
+
+#titluservicii{
+ margin-top: 10vh;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+}
+#titluserviciispr{
+ margin-top: 10vh;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+}
+#servlistabuze{
+ margin-top: 3vh;
+     font-family: "Poppins", sans-serif;
+     font-size: 1.2rem;
+  font-weight: 200;
+    list-style: none;
+    margin-right: 5vw;
+text-shadow: -4px 0px 3px rgba(0,0,0,1);
+}
+#servlistabuze::marker{
+  content: none;
+}
+#titlubuzetlf{
+ 
+  font-size: 1.3rem !important;
+    font-weight: 300;
+}
+#switchulserviciilor {
+  margin-top: 5vh;
+  background: rgba(255, 243, 214, 0.12);
+  border-radius: 2.5em;
+  border: 1.5px solid rgba(255, 214, 150, 0.35);
+  box-shadow:
+    0 1px 16px 0 #E4C58E,
+    0 6px 48px 0 #B6975A88,
+    0 0px 0px 0px #fff5;
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  transition:
+    box-shadow 0.18s cubic-bezier(.5,.5,0,1.2),
+    background 0.15s cubic-bezier(.57,.57,0,1.2),
+    transform 0.15s cubic-bezier(.5,.7,.2,1.2);
+  overflow: hidden;
+  position: relative;
+  min-width: 260px;
+  min-height: 3.2em;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#switchulserviciilor h1 {
+  margin: 0;
+  font-family: "Poppins",sans-serif;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #B78B31;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px rgba(255, 230, 180, 0.4);
+  z-index: 2;
+  position: relative;
+  transition: color 0.22s cubic-bezier(.54,.01,.2,1.2);
+  pointer-events: none;
+}
+
+#switchulserviciilor::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -50%; left: -30%;
+  width: 65%;
+  height: 200%;
+  background: linear-gradient(120deg, #fff0 20%, #FFEAB0 55%, #fff0 80%);
+  opacity: 0.35;
+  filter: blur(5px);
+  transform: translateX(-220px) rotate(-8deg);
+  transition: transform 0.65s cubic-bezier(.5,.5,.1,1.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#switchulserviciilor:hover,
+#switchulserviciilor:focus {
+  background: rgba(255, 245, 215, 0.25);
+  box-shadow:
+    0 2px 32px 0 #E4C58E,
+    0 8px 80px 0 #B6975A88,
+    0 0px 0px 2px #fff8;
+  transform: scale(1.045) translateY(-2px);
+}
+#switchulserviciilor:hover::after,
+#switchulserviciilor:focus::after {
+  transform: translateX(250px) rotate(-8deg);
+  opacity: 0.55;
+}
+
+#switchulserviciilor:active {
+  background: rgba(247, 210, 140, 0.3);
+  transform: scale(0.98) translateY(1px);
+  box-shadow:
+    0 0px 0px 0 #B6975A44,
+    0 0px 0px 0 #B6975A22;
+}
+
+
+#butonptrprog{
+  width: auto;
+  height: auto;
+
+justify-content: center;
+align-items: center;
+display: flex;
+
+}
+#programare{
+  margin-top: 20vh;
+  --glow-color: #EEDE79;
+  --glow-spread-color: rgba(202, 170, 92, 0.78);
+  --enhanced-glow-color: #EEDE79;
+  --btn-color: #ae852567;
+  border: .25em solid var(--glow-color);
+  padding: 1em 2em;
+  color: var(--glow-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+              0 0 4em 1em var(--glow-spread-color),
+              inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+#programare::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+#programare:hover {
+  color: black;
+  
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+              0 0 4em 2em var(--glow-spread-color),
+              inset 0 0 .75em .25em var(--glow-color);
+}
+
+#programare:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+              0 0 2.5em 2em var(--glow-spread-color),
+              inset 0 0 .5em .25em var(--glow-color);
+}
+
+#socialmedia{
+  width: 100vw;
+  height: auto;
+ margin-top: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+gap: 10vh;
+}
+#smh1{
+  font-size: 15vw;
+  color: rgb(245, 226, 191);
+  font-family: "ClashDisplay-Bold",'Times New Roman', Times, serif;
+   /* ... restul stilurilor ... */
+  background: linear-gradient(to bottom, #eedc9a 10%, #18140a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+#mockuri{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+
+}
+#mockinsta{
+  transform: translateX(5vw);
+  z-index: 100000;
+max-height: 50vh;
+filter: drop-shadow(7px 5px 12px #ffffff41);
+}
+#instatext{
+  color: #eedc9aa0;
+  text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.112);
+   font-family: "ClashDisplay-Bold",'Times New Roman', Times, serif;
+     font-size: 5vw;
+     letter-spacing: 0.5vw;
+}
+#insta{
+
+  z-index: 10000;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tiktokul{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+#tiktoktex,#tiktoktex{
+    color: #eedc9aa0;
+  text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.11);
+   font-family: "ClashDisplay-Bold",'Times New Roman', Times, serif;
+     font-size: 7vw;
+     letter-spacing: 0.5vw;
+     margin: 0;
+}
+#mocktt{
+
+  z-index: 100000;
+max-height: 40vh;
+filter: drop-shadow(7px 5px 12px #ffffff41);
+}
+
+#facebookul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  width: 100vw;
+  height: auto;
+}
+#mockfb{
+    z-index: 100000;
+max-height: 50vh;
+filter: drop-shadow(7px 5px 12px #ffffff41);
+}
+#facebooktext{
+ color: #eedc9aa0;
+  text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.096);
+   font-family: "ClashDisplay-Bold",'Times New Roman', Times, serif;
+     font-size: 7vw;
+     letter-spacing: 0.5vw;
+}
+
+#footer-elegant {
+  width: 100vw;
+  height: 30vh;
+  background: rgba(0, 0, 0, 0.95);
+  border-top: 1.5px solid #4d4c4c;
+  box-shadow: 0 -6px 30px -8px #e8b4b426;
+  padding: 2vw 0 1vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  font-family: 'Poppins', 'ClashDisplay-Regular', Arial, sans-serif;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2.6vw;
+  margin-bottom: 0.6vw;
+}
+
+.footer-links a {
+  color: #ae8525;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  position: relative;
+  padding: 0.15em 0.55em;
+  transition: color 0.25s;
+}
+
+.footer-links a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, #eede79 30%, #b28a8a 100%);
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.3s cubic-bezier(.77,0,.18,1);
+  margin-top: 3px;
+}
+
+.footer-links a:hover {
+  color: #b28a8a;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-rights {
+  color: #a7a7a7;
+  font-size: 0.97rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin-top: 0.3vw;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  will-change: background-color;
+}
+#headermobil {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 19999999;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+ #arrow-up {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid ; /* culoarea săgeții */
+margin-left: 1vw;
+  }
+
+#logo_miscator{
+
+  max-width: 50vw;
+}
+#btp{
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+  margin-right: 2vw;
+   font-family: "Poppins", sans-serif;
+       font-weight: 300;
+}
+#btp a {
+  text-decoration: none;
+  color: inherit; /* păstrează culoarea textului */
+}
+#logo_miscator a{
+    text-decoration: none;
+  color: inherit; /* păstrează culoarea textului */
+}
+@font-face {
+  font-family: 'Abr';
+  src: url('fonts/AbrilFatface-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  
+}
+@font-face {
+  font-family: 'ClashDisplay-Elight';
+  src: url('fonts/fonts-clash/ClashDisplay-Extralight.woff2') format('woff2'),
+       url('fonts/fonts-clash/ClashDisplay-Extralight.woff') format('woff'),
+       url('fonts/fonts-clash/ClashDisplay-Extralight.ttf') format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClashDisplay-Light';
+  src: url('fonts/fonts-clash/ClashDisplay-Light.woff2') format('woff2'),
+       url('fonts/fonts-clash/ClashDisplay-Light.woff') format('woff'),
+       url('fonts/fonts-clash/ClashDisplay-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('fonts/fonts-clash/ClashDisplay-Regular.woff2') format('woff2'),
+       url('fonts/fonts-clash/ClashDisplay-Regular.woff') format('woff'),
+       url('fonts/fonts-clash/ClashDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('fonts/fonts-clash/ClashDisplay-Bold.woff2') format('woff2'),
+       url('fonts/fonts-clash/ClashDisplay-Bold.woff') format('woff'),
+       url('fonts/fonts-clash/ClashDisplay-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
